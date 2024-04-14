@@ -98,11 +98,39 @@
 
 //Bài 6: In hình trái tim
 
-let width = +prompt('width')
-for (let i = 0; i < width/4; i++) {
-    document.write('&nbsp;&nbsp;')
-    for (let j = 0; j < ; j++) {
-        
+for (let i = 0; i < 6; i++) {
+    for (let j = 0; j < 7; j++) {
+        if((i === 0 && (j === 0 || j === 3 || j === 6) ||
+            (i === 3 && (j === 0 || j === 6)) ||
+                (i === 4 && (j === 0 || j === 1 || j === 5 || j === 6)) ||
+                (i === 5 && (j === 0 || j === 1 || j === 2 || j === 4 || j === 5 || j === 6)))){
+            document.write('&nbsp;&nbsp;')
+        }else {
+            document.write(' * ')
+        }
     }
+    document.write('<br>')
+
 }
+
+// let size = +prompt('Nhập kích thước hình trái tim')
+// for (let i = 0; i < (size - 1)/3; i++) {
+//     for (let s = i; s < (size - 1)/6; s++) {
+//         document.write('&nbsp;&nbsp;')
+//     }
+//     for (let j = 0; j < (i + 1)*2; j++) {
+//         document.write('*')
+//     }
+//     for (let k = i; k < (size); k++) {
+//         document.write('&nbsp;&nbsp;')
+//     }
+//     for (let j = 0;j < (i + 2); j++) {
+//         document.write('*')
+//     }
+//     for (let s = i; s < (size - 1)/6; s++) {
+//         document.write('&nbsp;&nbsp;')
+//     }
+//     document.write('<br>')
+// }
+
 
